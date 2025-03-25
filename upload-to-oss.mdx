@@ -1,0 +1,42 @@
+---
+title: '上传到阿里云 OSS'
+description: '了解如何将文件上传到阿里云 OSS'
+---
+
+## 上传文件到阿里云 OSS
+
+在本节中，我们将介绍如何将文件上传到阿里云 OSS。
+
+### 安装阿里云 OSS SDK
+
+确保您已经安装了阿里云 OSS SDK。如果您还没有安装，请参考[快速开始](quickstart)部分。
+
+### 示例代码
+
+以下是使用 Node.js 上传文件到阿里云 OSS 的示例代码：
+
+```javascript
+const OSS = require('ali-oss');
+
+const client = new OSS({
+  region: 'oss-cn-region', // 替换为您的区域
+  accessKeyId: 'yourAccessKeyId', // 替换为您的 Access Key ID
+  accessKeySecret: 'yourAccessKeySecret', // 替换为您的 Access Key Secret
+  bucket: 'yourBucketName' // 替换为您的 Bucket 名称
+});
+
+async function uploadFile() {
+  try {
+    const result = await client.put('object-name', 'local-file-path');
+    console.log('上传成功：', result);
+  } catch (err) {
+    console.error('上传失败：', err);
+  }
+}
+
+uploadFile();
+```
+
+### 结论
+
+通过以上步骤，您可以轻松地将文件上传到阿里云 OSS。如果您有任何问题，请参考[阿里云 OSS 文档](https://help.aliyun.com/document_detail/32044.html)以获取更多信息。 
