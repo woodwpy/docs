@@ -1,0 +1,38 @@
+---
+title: '10分钟入门MCP协议'
+description: '快速了解MCP协议的基本概念和使用方法'
+---
+
+## 什么是MCP协议？
+
+MCP（Multi-Channel Protocol）协议是一种用于多通道通信的协议，广泛应用于各种网络应用中。
+
+## MCP协议的基本概念
+
+- **多通道通信**：MCP协议支持在多个通道之间进行数据传输。
+- **高效性**：MCP协议设计用于提高数据传输的效率。
+
+## 如何使用MCP协议
+
+1. **安装相关库**：
+   根据您的开发环境，安装MCP协议的相关库。
+
+2. **示例代码**：
+   以下是使用MCP协议的基本示例代码：
+
+   ```javascript
+   // 示例代码
+   const mcp = require('mcp-protocol');
+
+   mcp.connect('server-address', (err) => {
+       if (err) {
+           console.error('连接失败：', err);
+       } else {
+           console.log('连接成功！');
+       }
+   });
+   ```
+
+## 结论
+
+通过以上步骤，您可以快速入门MCP协议。如果您有任何问题，请参考相关文档以获取更多信息。 
